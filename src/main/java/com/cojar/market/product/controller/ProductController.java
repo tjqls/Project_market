@@ -23,8 +23,11 @@ public class ProductController {
         return "product/list";
     }
 
-    @GetMapping("detail/{id}")
+    @GetMapping("/detail/{id}")
     public String detail(@PathVariable Long id, Model model) {
+
+        Product product = productService.getProduct(id);
+        model.addAttribute("product", product);
 
         return "product/detail";
     }
