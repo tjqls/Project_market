@@ -18,7 +18,11 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Getter
 public class Product extends BaseEntity {
 
+    private int marketId;
     private String name;
     private int price;
+    private int hitCount;
+    private String isActive;
+    private String Description;
 
 }
