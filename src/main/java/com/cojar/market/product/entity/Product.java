@@ -1,5 +1,6 @@
 package com.cojar.market.product.entity;
 
+import com.cojar.market.base.entity.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -15,14 +16,9 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Entity
 @Setter
 @Getter
-public class Product {
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    private long id;
+public class Product extends BaseEntity {
+
     private String name;
     private int price;
-    @CreatedDate
-    private LocalDateTime createDate;
-    @LastModifiedDate
-    private LocalDateTime modifyDate;
+
 }
